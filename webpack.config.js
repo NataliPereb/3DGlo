@@ -9,10 +9,12 @@ module.exports = {
     },
     devServer: {
         hot: true,
+        liveReload: true,
         static: {
             directory: "dist",
             watch: true,
         },
+        open: true,
     },
     module: {
         rules: [
