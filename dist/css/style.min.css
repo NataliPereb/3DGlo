@@ -677,7 +677,6 @@ footer .web {
 }
 .popup {
     display: none;
-    position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
@@ -686,6 +685,7 @@ footer .web {
     z-index: 9;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 .popup .main-form input {
     display: block;
     left: 0;
