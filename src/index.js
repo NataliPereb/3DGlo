@@ -14,4 +14,10 @@ calc();
 forms();
 tabs();
 addDots();
-slider();
+slider({
+    containerClass: ".portfolio-content",
+    slideClass: ".portfolio-item",
+    dotClass: ".dot",
+    activeSlideClass: "portfolio-item-active",
+    activeDotClass: "dot-active",
+});
