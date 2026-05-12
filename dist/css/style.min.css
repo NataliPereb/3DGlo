@@ -677,6 +677,7 @@ footer .web {
 }
 .popup {
     display: none;
+    position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
