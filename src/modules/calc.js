@@ -1,5 +1,6 @@
+import { animate } from "./helpers";
+
 const calc = (price = 100) => {
-    // фильтр
     const calcBlock = document.querySelector(".calc-block");
     const calcType = document.querySelector(".calc-type");
     const calcSquare = document.querySelector(".calc-square");
@@ -40,8 +41,21 @@ const calc = (price = 100) => {
         } else {
             totalValue = 0;
         }
-        total.textContent = totalValue;
+        const startValue = +total.textContent;
+        const endValue = Math.floor(totalValue);
+        animate({
+            duration: 500,
+            timing(timeFraction) {
+                return timeFraction;
+            },
+            draw(progress) {
+                total.textContent = Math.floor(
+                    startValue + (endValue - startValue) * progress,
+                );
+            },
+        });
     };
+
     calcBlock.addEventListener("input", (e) => {
         //countCalc();
         if (
