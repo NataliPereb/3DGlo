@@ -6,6 +6,7 @@ import forms from "./modules/forms";
 import tabs from "./modules/tabs";
 import addDots from "./modules/addDots";
 import slider from "./modules/slider";
+import sendForm from "./modules/sendForm";
 
 timer("01 september 2026");
 menu();
@@ -20,4 +21,31 @@ slider({
     dotClass: ".dot",
     activeSlideClass: "portfolio-item-active",
     activeDotClass: "dot-active",
+});
+sendForm({
+    formId: "form1",
+    someElement: [
+        {
+            type: "block",
+            id: "total",
+        },
+    ],
+});
+sendForm({
+    formId: "form3",
+    someElement: [
+        {
+            type: "block",
+            id: "total",
+        },
+    ],
+});
+sendForm({
+    formId: "form2",
+    someElement: [
+        {
+            type: "block",
+            id: "total",
+        },
+    ],
 });
